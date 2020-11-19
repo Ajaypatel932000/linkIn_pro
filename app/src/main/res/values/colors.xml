@@ -5,6 +5,34 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="black1">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+        <color name="backgroundWhite">#FFFFFF</color>
+
+        <color name="colorPrimary">#008577</color>
+        <color name="colorPrimaryDark">#2196F3</color>
+        <color name="colorAccent">#009688</color>
+        <color name="splashClr">#0D80CF</color>
+        <color name="fontClr">#FFEBF0E9</color>
+
+        <!-- Sign Up color code-->
+        <color name="colorPrimaryS">#2D383F</color>
+        <color name="colorPrimaryDarkS">#2D383F</color>
+        <color name="colorAccentS">#4EB9E9</color>
+        <color name="BackgroundS">#2CA7E0</color>
+
+        <!-- Dashboard Color code -->
+        <color name="colorPrimaryDashboard">#FFFFFF</color>
+        <color name="colorPrimaryDarkDashboard">#2196F3</color>
+        <color name="colorAccentDashboard">#090808</color>
+
+
+        <!--    Navigaton Layout    -->
+        <color name="Primary">#2196F3</color>
+        <color name="PrimaryDark">#2196F3</color>
+        <color name="Darkgrey">#FF5252</color>
+        <color name="black">#212121</color>
+        <color name="colorGreen">#32CD32</color>
+
 </resources>

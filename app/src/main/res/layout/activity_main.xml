@@ -7,28 +7,39 @@
     tools:context=".MainActivity"
     android:background="#FFFFFF">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="334dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="200dp"
-            android:layout_marginEnd="54dp"
-            android:src="@drawable/logo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/backgroundWhite"
+            >
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/logo"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="327dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center_horizontal"
-            android:text="www.codeseasy.com"
-            android:textColor="#454545"
-            android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="300dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/logo" />
+
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="TRABAJO"
+                    android:textColor="#2CA7E0"
+                    android:textStyle="italic"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="40dp" />
+
+
+
+        </LinearLayout>
 </RelativeLayout>
 

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.linkin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LinkIn">
-        <activity android:name=".cmp_res"></activity>
+        <activity android:name=".student_details"></activity>
+        <activity android:name=".std_show" />
+        <activity android:name=".forgot_password" />
+        <activity android:name=".Show" />
+        <activity android:name=".Delete" />
+        <activity android:name=".Update" />
+        <activity android:name=".Add" />
+        <activity android:name=".profile" />
+        <activity android:name=".new_password" />
+        <activity android:name=".std_dashboard" />
+        <activity android:name=".cmp_dashboard" />
+        <activity android:name=".std_res" />
+        <activity android:name=".cmp_res" />
         <activity android:name=".choose" />
         <activity android:name=".login" />
         <activity android:name=".MainActivity">
@@ -19,6 +36,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
