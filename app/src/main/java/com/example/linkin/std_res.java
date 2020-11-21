@@ -21,6 +21,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.linkin.mail.JavaMail;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,7 +44,7 @@ public class std_res extends AppCompatActivity {
     RadioButton male, female;
     String gender = "";
 
-
+    public String email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,7 +145,7 @@ public class std_res extends AppCompatActivity {
     public void nextSignUpScreen(View view) {
         if (checkEmpty() && validation() ) { //&& !ans
 
-
+               email=e_email.getText().toString();
             // here add the logic of registration
             Log.i("USERNAME" ,e_userName.getText().toString());
             Log.i("pass",e_pass.getText().toString());
@@ -161,6 +162,7 @@ public class std_res extends AppCompatActivity {
                         ans = object.getString("key");
                         if(ans.equalsIgnoreCase("true"))
                         {
+                            sendMail();
                             Intent intent=new Intent(std_res.this,login.class);
                             startActivity(intent);
                         }else
@@ -275,5 +277,12 @@ public class std_res extends AppCompatActivity {
             return true;
         }
     }
+    public void sendMail() {
+        String subject = "UserId";
+        String message = "Your UserId is " + e_userName.getText().toString();
+        JavaMail javaMailAPI = new JavaMail(this, email, subject, message);
+        javaMailAPI.execute();
+    }
+
 
 }

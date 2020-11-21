@@ -162,7 +162,7 @@ public class std_dashboard extends AppCompatActivity  {
                     {
                         JSONObject  o=jsonArray.getJSONObject(i);
                        // Listitem_class_show item=new Listitem_class_show(o.getString("u_id"),o.getString("job_type"),o.getString("message"),o.getString("vacant_seat"))
-                        ListItem_std_show listItem=new ListItem_std_show(o.getString("email"),o.getString("num"),o.getString("job_type"),o.getString("message"),o.getString("vacant_seat"),o.getString("salary"));
+                        ListItem_std_show listItem=new ListItem_std_show(o.getString("email"),o.getString("num"),o.getString("job_type"),o.getString("message"),o.getString("vacant_seat"),o.getString("salary"),o.getString("name"));
                         list.add(listItem);
                     }
                     adapter=new MyAdapter_std_show(list,getApplicationContext());

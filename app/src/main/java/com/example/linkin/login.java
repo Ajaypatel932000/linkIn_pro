@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -49,11 +50,15 @@ public class login extends AppCompatActivity {
         et_name = findViewById(R.id.etEmail);
         et_password = findViewById(R.id.etpass);
         registration = findViewById(R.id.reg_id);
+
+
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login_fun();
+
+                    login_fun();
+
             }
         });
         pass_link.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +99,7 @@ public class login extends AppCompatActivity {
     }
 
    public void login_fun() {
+
         userName = et_name.getText().toString().trim();
         pass = et_password.getText().toString().trim();
 
@@ -112,13 +118,15 @@ public class login extends AppCompatActivity {
                  ans = object.getString("key");
                  if(ans.equalsIgnoreCase("company"))
                  {
+
                      Intent intent=new Intent(login.this,cmp_dashboard.class);
                      UserName=userName;
                      progressDialog.dismiss();
                      startActivity(intent);
                  }else if(ans.equalsIgnoreCase("student"))
                  {
-                    Intent intent=new Intent(login.this,std_dashboard.class);
+
+                     Intent intent=new Intent(login.this,std_dashboard.class);
                      UserName=userName;
                      progressDialog.dismiss();
                     startActivity(intent);

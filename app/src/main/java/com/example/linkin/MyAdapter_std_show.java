@@ -35,7 +35,7 @@ public class MyAdapter_std_show extends RecyclerView.Adapter<MyAdapter_std_show.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
        ListItem_std_show item=listItem.get(position);
         holder.job_type.setText(item.getJob_type());
-       // holder.message.setText(item.getMessage());
+        holder.message.setText(item.getName());
       //  holder.seat.setText(item.getVacant_seat());
         //holder.num.setText(item.getNumber());
         //holder.email.setText(item.getEmail());
@@ -68,7 +68,7 @@ public class MyAdapter_std_show extends RecyclerView.Adapter<MyAdapter_std_show.
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
            job_type= itemView.findViewById(R.id.tvjob_id);
-          // message=itemView.findViewById(R.id.tv_msg_id);
+           message=itemView.findViewById(R.id.tv_msg_id);
            //email=itemView.findViewById(R.id.tvemail_id);
            //num=itemView.findViewById(R.id.tvnum_id);
            //seat=itemView.findViewById(R.id.tvseat_id);

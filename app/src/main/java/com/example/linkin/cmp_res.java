@@ -22,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.linkin.mail.JavaMail;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,7 +41,7 @@ public class cmp_res extends AppCompatActivity {
     String URL1="https://test-ajay.000webhostapp.com/check_UserName.php";
     EditText e_userName, e_pass, e_confrim_pass, e_student_no, e_email,name;
     String ans;
-
+    public String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,7 +124,7 @@ public class cmp_res extends AppCompatActivity {
     public void nextSignUpScreen(View view) {
         if (checkEmpty() && validation() ) { //&& !ans
 
-
+             email=e_email.getText().toString();
             // here add the logic of registration
              Log.i("USERNAME" ,e_userName.getText().toString());
              Log.i("pass",e_pass.getText().toString());
@@ -140,6 +141,7 @@ public class cmp_res extends AppCompatActivity {
                          ans = object.getString("key");
                          if(ans.equalsIgnoreCase("true"))
                          {
+                             sendMail();
                              Intent intent=new Intent(cmp_res.this,login.class);
                              startActivity(intent);
                          }else
@@ -251,5 +253,12 @@ public class cmp_res extends AppCompatActivity {
         } else {
             return true;
         }
+    }
+
+    public void sendMail() {
+        String subject = "UserId";
+        String message = "Your UserId is " + e_userName.getText().toString();
+        JavaMail javaMailAPI = new JavaMail(this, email, subject, message);
+        javaMailAPI.execute();
     }
 }
